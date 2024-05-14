@@ -30,6 +30,51 @@ The first player to form a horizontal, vertical, or diagonal line wins.
 If no player wins and the board is full, the game declares a draw.
 Use the "RESTART" button to reset player scores and start a new game.
 Use the "CONTINUE" button to start a new round without resetting player scores.
+Block diagram:
+        Start
+|
+V
+Initialize Game
+|
+V
+Draw Game Board
+|
+V
+Loop until game ends:
+|   |
+|   V
+|   Player Makes Move
+|   |
+|   V
+|   Check for Winner
+|   |
+|   V
+|   If Winner:
+|   |   |
+|   |   V
+|   |   Display Winner
+|   |
+|   V
+|   If Draw:
+|   |   |
+|   |   V
+|   |   Display Draw
+|   |
+|   V
+|   Switch Player
+|
+V
+End Game
+|
+V
+Display Final Scores
+|
+V
+Option to Restart or Continue
+|
+V
+End
+
 Additional Notes:
 
 The game board is dynamically drawn using tkinter's Canvas widget.
